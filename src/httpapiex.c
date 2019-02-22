@@ -308,7 +308,7 @@ HTTPAPIEX_RESULT HTTPAPIEX_ExecuteRequest(HTTPAPIEX_HANDLE handle, HTTPAPI_REQUE
     else
     {
         /*Codes_SRS_HTTPAPIEX_02_007: [If parameter requestType does not indicate a valid request, HTTPAPIEX_ExecuteRequest shall fail and return HTTPAPIEX_INVALID_ARG.] */
-        if (requestType >= COUNT_ARG(HTTPAPI_REQUEST_TYPE_VALUES))
+        if (requestType >= MU_COUNT_ARG(HTTPAPI_REQUEST_TYPE_VALUES))
         {
             result = HTTPAPIEX_INVALID_ARG;
             LOG_HTTAPIEX_ERROR();
